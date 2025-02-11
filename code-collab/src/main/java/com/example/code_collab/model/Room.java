@@ -1,33 +1,22 @@
 package com.example.code_collab.model;
 
-
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document
 public class Room {
-    @Id
-    private String id;
     private String roomId;
     private String code;
 
-    // Getters and Setters
+    public Room() {}
 
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setRoomId(String roomId) {
+    public Room(String roomId, String code) {
+        this.roomId = roomId;
+        this.code = code;
     }
 
     public String getRoomId() {
         return roomId;
+    }
+
+    public void setRoomId(String roomId) {
+        this.roomId = roomId;
     }
 
     public String getCode() {
